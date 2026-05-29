@@ -141,7 +141,7 @@ class WeatherScreen : AppCompatActivity() {
                 if(mnSun.toString().isEmpty()){
                     txtMnSun.error = "Please enter the minimum temperature for Sunday"
                 }
-            } else {
+            } else{
                 // The array of Maximum temperatures for the week
                 val maxTemp = intArrayOf(mxMon, mxTue, mxWed, mxThu, mxFri, mxSat, mxSun)
                 val max = maxTemp.joinToString(", ")
