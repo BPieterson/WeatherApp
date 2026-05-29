@@ -144,17 +144,19 @@ class WeatherScreen : AppCompatActivity() {
             } else {
                 // The array of Maximum temperatures for the week
                 val maxTemp = intArrayOf(mxMon, mxTue, mxWed, mxThu, mxFri, mxSat, mxSun)
+                val max = maxTemp.joinToString(", ")
 
                 // The array of Minimum temperatures for the week
                 val minTemp = intArrayOf(mnMon, mnTue, mnWed, mnThu, mnFri, mnSat, mnSun)
+                val min = minTemp.joinToString(", ")
 
                 // The array of Weather conditions for the week
                 val weatherCondition = arrayOf(spMon, spTue, spWed, spThu, spFri, spSat, spSun)
 
                 // Proceed to the next screen or perform necessary actions with the input data
                 val intent = Intent(this, ResultScreen::class.java)
-                intent.putExtra("maxTemp", maxTemp)
-                intent.putExtra("minTemp", minTemp)
+                intent.putExtra("max", max)
+                intent.putExtra("min", min)
                 intent.putExtra("weatherCondition", weatherCondition)
                 startActivity(intent)
                 finish()

@@ -13,7 +13,7 @@ class ResultScreen : AppCompatActivity() {
     lateinit var btnGG : Button
     lateinit var btnHome : Button
 
-    val days = arrayOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+    val days = arrayOf("Monday", "\nTuesday", "\nWednesday", "\nThursday", "\nFriday", "\nSaturday", "\nSunday")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,12 +23,12 @@ class ResultScreen : AppCompatActivity() {
         btnGG = findViewById(R.id.btnGG)
         btnHome = findViewById(R.id.btnHome)
 
-        val maxTemp = intent.getIntExtra("maxTemp", 0)
-        val minTemp = intent.getIntExtra("minTemp", 0)
-        val weatherConditions = intent.getStringExtra("weatherConditions")
+        val max = intent.getStringExtra("max")
+        val min = intent.getStringExtra("min")
+        val weatherConditions = intent.getStringExtra("weatherCondition")
 
         tvResults.text = "Days \tMax Temp \tMin Temp \tWeather\n" +
-                "${days.joinToString(", ")} \t$maxTemp \t$minTemp \t$weatherConditions"
+                "${days.joinToString(", ")} \t$max \t$min \t$weatherConditions"
 
     }
 }

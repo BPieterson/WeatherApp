@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+
+    <string-array name="weather_conditions">
+        <item>Sunny</item>
+        <item>Raining/Showers</item>
+        <item>Cloudy/Overcast</item>
+        <item>Partly Cloudy</item>
+        <item>Snowing</item>
+        <item>Windy</item>
+        <item>Cold</item>
+        <item>Hot</item>
+    </string-array>
 </resources>
